@@ -1,16 +1,21 @@
 {
-  "extends": "../../tsconfig.json",
   "include": ["src/**/*"],
 
+  "strict": true,
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
+    "declaration": true,
     "declarationDir": "dist",
-    "allowSyntheticDefaultImports": true,
     "paths": {
       "*": ["./src/*", "./node_modules/*"]
     },
+    "allowSyntheticDefaultImports":true,
+    "typeRoots": ["node_modules/@types"],
+    "target": "ES2018",
+    "module": "ES2020",
     "moduleResolution": "node",
-    "typeRoots": ["node_modules/@types"]
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
   }
 }
